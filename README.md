@@ -9,7 +9,7 @@ The container image is REALLY large. The dependencies of EasyOCR are heavy, so r
 I tried using a more lightweight base image (Alpine) although wasn't able to get PaddlePaddle to function with it.
 # Usage
 ## Container
-Build using the Dockerfile. Listens on the default Flask port of 5000
+Build using the Dockerfile. Listens on the default Flask port of 5000.
 As mentioned, the image is pretty large, and will take a while to pull.
 ## Ubuntu Server
 Clone this repo, change directory into the base directory and:
