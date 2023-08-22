@@ -5,5 +5,6 @@ RUN pip install paddlepaddle==2.4.0rc0 paddleocr==2.6.0.1 imutils==0.5.4 Pillow=
 RUN mkdir -p /app/uploads
 RUN chmod 777 /app/uploads
 COPY initialize_models.py ocr_api.py sendimage.py hello.jpg /app/
+ENV OCR_LISTENER_PORT=5000
 RUN python3 /app/initialize_models.py
 CMD ["python3", "/app/ocr_api.py"]
