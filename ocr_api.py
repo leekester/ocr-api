@@ -18,7 +18,7 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB
 
 # Specify the directory where uploaded files will be stored
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = '/app/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def fn_easyocr(img_path):
