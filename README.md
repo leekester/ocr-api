@@ -11,7 +11,7 @@ I tried using a more lightweight base image (Alpine) although wasn't able to get
 # Usage
 ## Container
 Build using the Dockerfile. Listens on the default Flask port of 5000.
-As mentioned, the image is pretty large, and will take a while to pull.
+As mentioned, the image is pretty large, and will take a while to push and pull.
 ## Ubuntu Server
 Clone this repo, change directory into the base directory and:
 ```
@@ -22,4 +22,39 @@ matt@ocr:~$ mkdir -p /app/uploads
 matt@ocr:~$ chmod 777 /app/uploads
 matt@ocr:~$ cp * /app/
 matt@ocr:~$ python3 /app/ocr_api.py
+```
+## Calling the Service
+An example call to the service is included in the repo as sendimage.py.\
+The service returns a JSON response such as the one below:
+```
+[
+	[{
+		"text": "HELLO WORLD",
+		"confidence": 0.9998155695810481,
+		"model": "easyocr",
+		"processing_time_ms": 304.94,
+		"correlation_id": "274a024c-1571-49db-af82-2df5d23df3bd"
+	}],
+	[{
+		"text": "HELLOWORLD",
+		"confidence": 0.9997454881668091,
+		"model": "ppocr",
+		"processing_time_ms": 75.31,
+		"correlation_id": "9a00de4a-0b22-4c25-924b-35b4115f53ff"
+	}],
+	[{
+		"text": "HELLOWORLD",
+		"confidence": 0.9898713231086731,
+		"model": "ppocrv2",
+		"processing_time_ms": 85.71,
+		"correlation_id": "bea9806d-da5d-4a8e-b506-2857173236e7"
+	}],
+	[{
+		"text": "HELLO WORLD",
+		"confidence": 0.9897682666778564,
+		"model": "ppocrv3",
+		"processing_time_ms": 137.64,
+		"correlation_id": "97db6f59-20e9-40d4-bfc8-f221590e7612"
+	}]
+]
 ```
