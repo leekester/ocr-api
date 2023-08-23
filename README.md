@@ -1,6 +1,7 @@
 # Background
 This is an example of exposing an Optical Character Recognition (OCR) service as a RESTful API.\
-As multiple OCR engines and models are running, the consumer can choose which engine/model to carry out the recognition - or execute against all and
+As multiple OCR engines and models are running, the consumer can choose which engine/model to carry out the recognition - or execute against all models and parse the output.\
+This isn't production-ready, but hopefully is a useful starter for anyone looking to build a similar capability.
 # Components
 - I've run this on Ubuntu 22.04. Works both on an IaaS VM or in a container
 - Flask provides the web service
@@ -25,7 +26,8 @@ matt@ocr:~$ python3 /app/ocr_api.py
 ```
 ## Calling the Service
 An example call to the service is included in the repo as sendimage.py.\
-The service returns a JSON response such as the one below:
+The service returns a JSON response such as the one below. To only run the image through a single model, specify it in the 'model' HTTP header. Details are in sendimage.py.
+In my testing, PPOCR-v3 has been the winner in terms of accuracy.
 ```
 [
 	[{
