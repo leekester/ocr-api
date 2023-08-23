@@ -1,11 +1,12 @@
 # Background
-This is an example of exposing an Optical Character Recognition (OCR) service as a RESTful API.
+This is an example of exposing an Optical Character Recognition (OCR) service as a RESTful API.\
+As multiple OCR engines and models are running, the consumer can choose which engine/model to carry out the recognition - or execute against all and
 # Components
 - I've run this on Ubuntu 22.04. Works both on an IaaS VM or in a container
 - Flask provides the web service
 - EasyOCR and Paddle for OCR
 # Image Size
-The container image is REALLY large. The dependencies of EasyOCR are heavy, so removing that element would result in a significantly smaller image.
+The container image is **REALLY** large. The dependencies of EasyOCR are heavy, so removing that element would result in a significantly smaller image.\
 I tried using a more lightweight base image (Alpine) although wasn't able to get PaddlePaddle to function with it.
 # Usage
 ## Container
