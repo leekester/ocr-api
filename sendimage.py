@@ -6,13 +6,9 @@ import time
 start = time.time()
 
 image = "/app/hello.jpg"
-image = "/home/matt/anpr/paddle/cha56r_yellow.jpg"
-image = "/app/t356vaj.jpg"
-url = 'http://localhost:5000/ocr'  # Replace 'your_server_ip' with your server's IP or domain name
+url = 'http://localhost:5000/ocr'  # Replace with your IP or domain name
 
 model = 'all'
-
-#model = ""
 
 if model != "":
     headers = {
