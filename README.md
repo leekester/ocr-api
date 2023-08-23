@@ -15,11 +15,11 @@ As mentioned, the image is pretty large, and will take a while to pull.
 ## Ubuntu Server
 Clone this repo, change directory into the base directory and:
 ```
-# apt-get update
-# apt install python3 python3-pip libgl1-mesa-glx curl -y
-# pip install paddlepaddle==2.4.0rc0 paddleocr==2.6.0.1 imutils==0.5.4 Pillow==9.5.0 opencv-python==4.5.5.64 numpy==1.23.5 Flask==2.3.2 matplotlib==3.6.0 easyocr==1.7.0
-# mkdir -p /app/uploads
-# chmod 777 /app/uploads
-# cp * /app/
-# python3 /app/ocr_api.py
+matt@ocr:~$ apt-get update
+matt@ocr:~$ apt install python3 python3-pip libgl1-mesa-glx curl -y
+matt@ocr:~$ pip install paddlepaddle==2.4.0rc0 paddleocr==2.6.0.1 imutils==0.5.4 Pillow==9.5.0 opencv-python==4.5.5.64 numpy==1.23.5 Flask==2.3.2 matplotlib==3.6.0 easyocr==1.7.0
+matt@ocr:~$ mkdir -p /app/uploads
+matt@ocr:~$ chmod 777 /app/uploads
+matt@ocr:~$ cp * /app/
+matt@ocr:~$ python3 /app/ocr_api.py
 ```
